@@ -7,7 +7,7 @@ canal是一个订阅消费模式的服务，于是其消费位点的控制就非
 
 <!-- more -->
 
-首先我们来分析客户端是如何工作，前文[canal——代码初读][1]我们分析过`CanalMQStarter`的启动过程会为每个destination都新建一个`CanalMQRunnable`，在不同的线程中来执行`CanalMQRunnable`。`CanalMQRunnable`的执行调用`CanalMQStarter`的`worker`方法。数据的消费与传输都在这个`worker`方法中执行。
+首先我们来分析客户端是如何工作 ，前文[canal——代码初读][1]我们分析过`CanalMQStarter`的启动过程会为每个destination都新建一个`CanalMQRunnable`，在不同的线程中来执行`CanalMQRunnable`。`CanalMQRunnable`的执行调用`CanalMQStarter`的`worker`方法。数据的消费与传输都在这个`worker`方法中执行。
 
 # CanalMQStarter.work
 
